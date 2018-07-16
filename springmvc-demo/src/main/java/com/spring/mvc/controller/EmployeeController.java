@@ -12,10 +12,7 @@ import com.spring.mvc.dao.Employee;
 public class EmployeeController {
 
 	@RequestMapping(method = RequestMethod.POST)
-	public String saveEmployee(Model model, Employee employee) {
-		System.out.println(employee.getEmpId());
-		System.out.println(employee.getEmpName());
-		System.out.println(employee.getEmpSalary());
+	public String saveEmployee(Model model, Employee employee) {		
 		model.addAttribute("employee", employee);
 		return "display";
 	}
